@@ -1,17 +1,24 @@
 var pubs = require('../mocks/pubs.json');
 
+var pubsJS = require('../mocks/pubs');
+
 
 function listeAll() {
 
 
+    console.log(pubsJS.getPubs());
+
     var result = [];
 
-    for (var i in pubs)
-        result.push([i, pubs[i].name]);
+    for (var i in pubsJS.getPubs()) {
 
-    return result;
+        result.push([i, pubsJS.getPubs().name]);
+    }
 
-    // return pubs;
+    // return result;
+
+    return pubsJS.getPubs();
+
 
 }
 

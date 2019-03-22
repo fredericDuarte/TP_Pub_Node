@@ -39,13 +39,17 @@
       "Saturday"
     ],
     "openHours": {
-      "start": 10,
+      "start": 9,
       "end": 1
     },
     "beers": [
       {
         "type": "Blonde",
         "name": "Triple Karmeliet"
+      },
+      {
+        "type": "Blanche",
+        "name": "Blanche de Namur"
       }
     ]
   }

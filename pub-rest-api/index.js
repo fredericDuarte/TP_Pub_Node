@@ -11,7 +11,7 @@ app.get('/pubs', function (req, res) {
 
    // res.send(pubs);
 
-    res.send(pubsOpen);
+    res.send(pubs);
 })
 var server = app.listen(3000, function () {
     console.log('Listening on port %d', server.address().port);
