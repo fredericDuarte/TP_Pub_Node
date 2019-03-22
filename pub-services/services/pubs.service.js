@@ -3,15 +3,15 @@ var pubs = require('../mocks/pubs.json');
 
 function listeAll() {
 
-    /*
-        var result = [];
 
-        for(var i in pubs)
-            result.push([i, pubs[i].name]);
+    var result = [];
 
-        return result;
-        */
-    return pubs;
+    for (var i in pubs)
+        result.push([i, pubs[i].name]);
+
+    return result;
+
+    // return pubs;
 
 }
 
@@ -31,10 +31,17 @@ function listeOpen() {
 
 
     for (var i in pubs) {
-        if (pubs[i].openDays == weekdays[d.getDay()]) {
-            result.push([i, pubs[i].name]);
+
+        for (var m in pubs[i].openDays) {
+
+            if (pubs[i].openDays[m] == weekdays[d.getDay()]) {
+
+                result.push([i, pubs[i].name]);
+            }
         }
     }
+
+    return result;
 
 }
 
@@ -42,6 +49,6 @@ function listeOpen() {
 module.exports = {
 
     listeAll: listeAll
-    // ,listeOpen: listeOpen
+    , listeOpen: listeOpen
 
 };
